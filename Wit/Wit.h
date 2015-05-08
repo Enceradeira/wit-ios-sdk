@@ -94,9 +94,13 @@
  */
 - (void) interpretString: (NSString *) string customData:(id)customData;
 
+/**
+* Sets the current ThreadId which identifies a conversational thread
+* See:  https://wit.ai/blog/2015/04/23/toward-dialog-thread
+*/
+- (void)setThreadId:(NSString *)threadId;
 
 #pragma mark - Context management
-
 /**
  * Sets context from NSDictionary. Merge semantics! 
  * See the context documentation in our doc for for more information:  http://wit.ai/docs/http/20140923#context-link

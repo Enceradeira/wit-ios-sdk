@@ -22,10 +22,11 @@
 @property id customData;
 @property NSString *witToken;
 @property NSMutableDictionary *context;
+@property WITThread *thread;
 @property BOOL isUploading;
 
 
--(id)initWithWitContext:(NSDictionary *)upContext vadEnabled:(WITVadConfig)vadEnabled withWitToken:(NSString *)witToken withDelegate:(id<WITRecordingSessionDelegate>)delegate;
+- (id)initWithWitContext:(NSDictionary *)upContext thread:(WITThread *)thread vadEnabled:(WITVadConfig)vadEnabled withWitToken:(NSString *)witToken withDelegate:(id <WITRecordingSessionDelegate>)delegate;
 -(void)stop;
 -(BOOL)isRecording;
 -(void)trackVad:(NSString *)messageId;

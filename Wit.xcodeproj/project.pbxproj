@@ -37,6 +37,8 @@
 		1D57693A1A14281A009294C2 /* WITCvad.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5769391A14281A009294C2 /* WITCvad.m */; };
 		1D57695A1A15195F009294C2 /* WITCvad.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D57693B1A1429C3009294C2 /* WITCvad.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1DC04EC21A16715E000579AE /* microphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B80E60A1755A1AA000C3A7B /* microphone.png */; };
+		235252CEFE64722FF53FC2BE /* WITThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 235250F51C898E816E7242AD /* WITThread.m */; };
+		2352545665CA29093C26FBFA /* WITThread.h in Headers */ = {isa = PBXBuildFile; fileRef = 235253B1BF78FAE9A283EA45 /* WITThread.h */; };
 		2B10D7A9175561F900973536 /* WITCircleView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B10D7A7175561F900973536 /* WITCircleView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2B10D7AA175561F900973536 /* WITCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B10D7A8175561F900973536 /* WITCircleView.m */; };
 		2B25FE451829A36800F698ED /* WitPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B25FE441829A25700F698ED /* WitPrivate.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -117,6 +119,8 @@
 		03F276CD1992D1BC00B53E61 /* WITVadSimple.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WITVadSimple.h; sourceTree = "<group>"; };
 		1D5769391A14281A009294C2 /* WITCvad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WITCvad.m; sourceTree = "<group>"; };
 		1D57693B1A1429C3009294C2 /* WITCvad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WITCvad.h; sourceTree = "<group>"; };
+		235250F51C898E816E7242AD /* WITThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WITThread.m; sourceTree = "<group>"; };
+		235253B1BF78FAE9A283EA45 /* WITThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WITThread.h; sourceTree = "<group>"; };
 		2B10D7A7175561F900973536 /* WITCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WITCircleView.h; sourceTree = "<group>"; };
 		2B10D7A8175561F900973536 /* WITCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WITCircleView.m; sourceTree = "<group>"; };
 		2B25FE441829A25700F698ED /* WitPrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WitPrivate.h; sourceTree = "<group>"; };
@@ -325,6 +329,8 @@
 				03D32A691A01B9350081C7D3 /* WITContextSetter.m */,
 				B9C0164A15DD327500C025BD /* Supporting Files */,
 				1D57693C1A14344A009294C2 /* fft */,
+				235250F51C898E816E7242AD /* WITThread.m */,
+				235253B1BF78FAE9A283EA45 /* WITThread.h */,
 			);
 			path = Wit;
 			sourceTree = "<group>";
@@ -381,6 +387,7 @@
 				03BAFA1D199D435C00CC2752 /* WITVadSimple.h in Headers */,
 				039C23C11992FE3B00BEA5C8 /* WITVad.h in Headers */,
 				03D32A6A1A01B9350081C7D3 /* WITContextSetter.h in Headers */,
+				2352545665CA29093C26FBFA /* WITThread.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -578,6 +585,7 @@
 				2B10D7AA175561F900973536 /* WITCircleView.m in Sources */,
 				039C23C21992FE3B00BEA5C8 /* WITVad.m in Sources */,
 				2BE5B2BE197832BA00B67304 /* util.m in Sources */,
+				235252CEFE64722FF53FC2BE /* WITThread.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

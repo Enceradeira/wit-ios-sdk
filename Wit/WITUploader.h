@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "WITRecorder.h"
+#import "WITThread.h"
 
 @protocol WITUploaderDelegate;
 
@@ -17,7 +18,7 @@
 @interface WITUploader : NSObject  <NSStreamDelegate>
 @property (nonatomic, strong) id<WITUploaderDelegate> delegate;
 
--(BOOL)startRequestWithContext:(NSDictionary *)context;
+- (BOOL)startRequestWithContext:(NSDictionary *)context thread:(WITThread *)thread;
 -(void)sendChunk:(NSData*)chunk;
 -(void)endRequest;
 @end

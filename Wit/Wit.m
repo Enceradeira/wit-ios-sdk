@@ -43,7 +43,7 @@
 
 
 - (void)start: (id)customData {
-    self.recordingSession = [[WITRecordingSession alloc] initWithWitContext:state.context
+    self.recordingSession = [[WITRecordingSession alloc] initWithWitContext:state.context thread:state.thread
                                                                  vadEnabled:[Wit sharedInstance].detectSpeechStop withWitToken:[WITState sharedInstance].accessToken
                                                                withDelegate:self];
     self.recordingSession.customData = customData;
@@ -63,7 +63,12 @@
     [self.wcs contextFillup:self.state.context];
     NSDate *start = [NSDate date];
     NSString *contextEncoded = [WITContextSetter jsonEncode:self.state.context];
-    NSString *urlString = [NSString stringWithFormat:@"https://api.wit.ai/message?q=%@&v=%@&context=%@", urlencodeString(string), kWitAPIVersion, contextEncoded];
+
+    NSString *urlString = [NSString stringWithFormat:@"https://api.wit.ai/message?q=%@&v=%@&context=%@%@",
+                                                     urlencodeString(string),
+                                                     kWitAPIVersion,
+                                                     contextEncoded,
+                                                     [state.thread toUrlParameter]];
     NSMutableURLRequest* req = [NSMutableURLRequest requestWithURL:[NSURL URLWithString: urlString]];
     [req setCachePolicy:NSURLRequestReloadIgnoringLocalCacheData];
     [req setTimeoutInterval:15.0];
@@ -104,6 +109,11 @@
 
                                [self gotResponse:object customData:customData error:nil];
                            }];
+}
+
+
+- (void)setThreadId:(NSString *)threadId {
+    state.thread = [[WITThread alloc] initWithId:threadId];
 }
 
 #pragma mark - Context management

@@ -8,7 +8,9 @@
 
 #import "WITState.h"
 
-@implementation WITState
+@implementation WITState {
+    WITThread *_thread;
+}
 
 #pragma mark - Util
 +(NSString*)UUID {
@@ -54,6 +56,15 @@
     return instance;
 }
 
+#pragma mark - Thread
+-(void)setThread:(WITThread *)thread {
+    _thread = thread == nil ? [[WITThread alloc] initWithId:@""] : thread;
+}
+
+-(WITThread*)thread{
+    return _thread;
+}
+
 -(id)init {
     self = [super init];
     if (!self) {
@@ -63,7 +74,7 @@
     self.resourcePath = [[self.class frameworkBundle] resourcePath];
     [self readPlist];
     self.context = [[NSMutableDictionary alloc] init];
-    
+    self.thread = [[WITThread alloc] initWithId:@""];
     return self;
 }
 @end
