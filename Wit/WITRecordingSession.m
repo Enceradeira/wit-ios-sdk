@@ -130,6 +130,10 @@ WITContextSetter *wcs;
     }
 }
 
+-(void)recorderWillStart{
+    [self.delegate recordingSessionActivityDetectorWillStart];
+}
+
 -(void)recorderStarted {
     [self.delegate recordingSessionActivityDetectorStarted];
 }

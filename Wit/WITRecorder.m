@@ -82,7 +82,8 @@ static void MyPropertyListener(void *userData, AudioQueueRef queue, AudioQueuePr
           [category isEqualToString:@"AVAudioSessionCategoryPlayAndRecord"])) {
         [NSException raise:@"Invalid AVAudioSession state" format:@"You should call setCategory and setActive, please see the documentation."];
     }
-    
+
+    [self.delegate recorderWillStart];
     self.state->recording = YES;
 
     int err;

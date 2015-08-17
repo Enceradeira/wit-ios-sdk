@@ -37,6 +37,7 @@
 @protocol WITRecordingSessionDelegate <NSObject>
 
 -(void)recordingSessionActivityDetectorStarted;
+-(void)recordingSessionActivityDetectorWillStart;
 -(void)recordingSessionDidStartRecording;
 -(void)recordingSessionDidStopRecording;
 -(void)recordingSessionRecorderGotChunk:(NSData*)chunk;

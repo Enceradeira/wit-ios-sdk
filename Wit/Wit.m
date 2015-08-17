@@ -217,6 +217,12 @@
 
 #pragma mark - WITRecordingSessionDelegate
 
+-(void)recordingSessionActivityDetectorWillStart {
+    if ([self.delegate respondsToSelector:@selector(witActivityDetectorWillStart)]) {
+        [self.delegate witActivityDetectorWillStart];
+    }
+}
+
 -(void)recordingSessionActivityDetectorStarted {
     if ([self.delegate respondsToSelector:@selector(witActivityDetectorStarted)]) {
         [self.delegate witActivityDetectorStarted];

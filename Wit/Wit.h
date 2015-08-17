@@ -132,6 +132,12 @@
 @optional
 
 /**
+* When using the hands free voice activity detection option (WITVadConfigFull), this callback will be called just before the microphone starts to listen.
+* This function will not be called if the [Wit sharedInstance].detectSpeechStop is not equal to WITVadConfigFull.
+*/
+- (void)witActivityDetectorWillStart;
+
+/**
  * When using the hands free voice activity detection option (WITVadConfigFull), this callback will be called when the microphone started to listen
  * and is waiting to detect voice activity in order to start streaming the data to the Wit API.
  * This function will not be called if the [Wit sharedInstance].detectSpeechStop is not equal to WITVadConfigFull
